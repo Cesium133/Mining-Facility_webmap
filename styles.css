@@ -1,0 +1,15 @@
+#mapid { 
+    height: 800px; 
+    margin:15px;
+}
+
+h1 {
+    text-align:center;
+    background-color: #3f444c;
+    color:white;
+    padding:2%;
+    margin: 0;
+    line-height:1.1;
+}
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webmap | Kevin Cheriyan </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/leaflet/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/plugins/leaflet-providers-master/css/gh-fork-ribbon.css">
+    <link rel="stylesheet" href="src/plugins/Leaflet.MousePosition-master/src/L.Control.MousePosition.css">
+    <link rel="stylesheet" href="src/plugins/Leaflet.PolylineMeasure-master/Leaflet.PolylineMeasure.css">
+    <link rel="stylesheet" href="src/plugins/leaflet-sidebar-master/src/L.Control.Sidebar.css">
+    <link rel="stylesheet" href="src/plugins/Leaflet.EasyButton-master/src/easy-button.css">
+    <link rel="stylesheet" href="src/plugins/leaflet-search-master/src/leaflet-search.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <script src = "src/leaflet/leaflet.js"></script>
+    <script src = "src/plugins/leaflet-providers-master/leaflet-providers.js"></script>
+    <script src = "src/plugins/Leaflet.MousePosition-master/src/L.Control.MousePosition.js"></script>
+    <script src = "src/plugins/Leaflet.PolylineMeasure-master/Leaflet.PolylineMeasure.js"></script>
+    <script src = "src/plugins/leaflet-ajax-gh-pages/dist/leaflet.ajax.js"></script>
+    <script src = "src/plugins/leaflet-sidebar-master/src/L.Control.Sidebar.js"></script>
+    <script src = "src/plugins/Leaflet.EasyButton-master/src/easy-button.js"></script>
+    <script src = "src/plugins/leaflet-search-master/src/leaflet-search.js"></script>
+</head>
+<body>
+        <h1>Mining Facilities in Latin America and Caribbean</h1>
+    <div class = "row">
+        <div class = "col-md-2">
+                
+        </div>
+        <div id = "mapid" class = "col-md-8">
+            <div id="sidebar">
+                <div id = "search">
+                <h4>Search for facilities by name: </h4>
+                </div>
+                <br>
+                <br>
+                <hr>
+
+                <div id = "filter">
+                    <h4>Filter facilities by commodity: </h4>
+                    <p>
+
+                <select id="commFilter" onChange = "SelectCommodityValue()">
+                    <option>Gold</option>
+                    <option>Silver</option>
+                    <option>Cement</option>
+                    <option>Iron and steel</option>
+                    <option>Natural gas</option>
+                    <option>Petroleum</option>
+                    <option>Zinc</option>
+                    <option>Copper</option>
+                    <option>Coal</option>
+                </select>            
+
+                <h5>Highlighted Commodity: <span id = "commOutput"></span></h5>
+                </div>
+                <hr>
+                <div id = "about">
+                <h5>About: </h5>
+                <p>Made by Kevin Cheriyan.</p>
+                <p>The data for this webmap is derived from <a href="https://www.sciencebase.gov/catalog/item/5809354ee4b0f497e78f3f02">this</a> 2016 USGS study.</p>
+                <p>
+                <ol> Upcoming Features:
+                    <li>Better looking search bar and button</li>
+                    <li>Area under search bar to display attributes of searched/returned facility</li>
+                    <li>Filter facilities feature: Show only chosen filter, Have option for "All Features", Add rest of commodities as options</li>
+                    <li>Add legend for facilities using SVG. </li>
+                </ol>
+                </p>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class = "col-md-2"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src = "lac_script.js"></script>
+</body>
+</html>
